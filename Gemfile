@@ -6,6 +6,18 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+group :development do
+	gem 'rspec-rails'
+	gem 'annotate'
+end
+
+group :test do
+	gem 'rspec'
+	gem 'webrat'
+	gem 'capybara'
+	gem 'guard-rspec'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
