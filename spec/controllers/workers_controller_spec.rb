@@ -20,5 +20,10 @@ describe WorkersController do
       get :new
       response.should be_success
     end
+
+    it 'should have the correct title' do
+      get :new
+      response.should have_selector('title', :content => 'New worker')
+    end
   end
 end

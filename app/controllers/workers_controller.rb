@@ -4,6 +4,7 @@ class WorkersController < ApplicationController
   end
 
   def new
+    @title = 'New worker'
     @worker = Worker.new
   end
 end
