@@ -79,6 +79,22 @@ describe WorkersController do
     end
   end
 
+  describe "GET request for 'show'" do
+    before(:each) do
+      @worker = Worker.create(:first_name => 'SampleFirst', :last_name => 'SampleLast')
+    end
+
+    it 'should be successful' do
+      get :show, :id => @worker
+      response.should be_success
+    end
+    
+    it 'should have the correct title' do
+      get :show, :id => @worker
+      response.should have_selector('title', :content => "Details for #{@worker.first_name}")
+    end
+  end
+
   describe "PUT request for 'update'" do
     before(:each) do
       @worker = Worker.create(:first_name => 'SampleFirst', :last_name => 'SampleLast')
@@ -123,6 +139,23 @@ describe WorkersController do
         put :update, :id => @worker, :worker => @attr
         response.should redirect_to(root_path)
       end
+    end
+  end
+
+  describe "DELETE request for 'destroy'" do
+    before(:each) do
+      @worker = Worker.create(:first_name => 'SampleFirst', :last_name => 'SampleLast')
+    end
+
+    it 'should delete the worker' do
+      lambda do
+        delete :destroy, :id => @worker
+      end.should change(Worker, :count).by(-1)
+    end
+
+    it 'should redirect to the root path' do
+      delete :destroy, :id => @worker
+      response.should redirect_to(root_path)
     end
   end
 end

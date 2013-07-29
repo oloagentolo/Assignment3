@@ -1,0 +1,14 @@
+<h1>Details for <%= @worker.first_name %></h1>
+
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', root_path %>

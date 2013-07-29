@@ -23,14 +23,25 @@ class WorkersController < ApplicationController
     @worker = Worker.find(params[:id])
   end
 
+  def show
+    @worker = Worker.find(params[:id])
+    @title = "Details for #{@worker.first_name}"
+  end
+  
   def update
     @worker = Worker.find(params[:id])
     if @worker.update(worker_params)
-      redirect_to root_path
+      redirect_to root_path, :notice => 'Worker was successfully updated.'
     else
       @title = 'Edit worker'
       render 'edit'
     end
+  end
+
+  def destroy
+    @worker = Worker.find(params[:id])
+    @worker.destroy
+    redirect_to root_path
   end
 
   private
