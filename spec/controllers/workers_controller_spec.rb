@@ -62,4 +62,67 @@ describe WorkersController do
       end
     end
   end
+
+  describe "GET request for 'edit'" do
+    before(:each) do
+      @worker = Worker.create(:first_name => 'SampleFirst', :last_name => 'SampleLast')
+    end
+
+    it 'should be successful' do
+      get :edit, :id => @worker
+      response.should be_success
+    end
+
+    it 'should have the correct title' do
+      get :edit, :id => @worker
+      response.should have_selector('title', :content => 'Edit worker')
+    end
+  end
+
+  describe "PUT request for 'update'" do
+    before(:each) do
+      @worker = Worker.create(:first_name => 'SampleFirst', :last_name => 'SampleLast')
+    end
+
+    describe 'failure' do
+      before(:each) do
+        @attr = { :last_name => '', :first_name => '' }
+      end
+
+      it "should not change the worker's attributes" do
+        put :update, :id => @worker, :worker => @attr
+        @worker.reload
+        @worker.first_name.should_not == @attr[:first_name]
+        @worker.last_name.should_not == @attr[:last_name]
+      end
+
+      it "should render the 'edit' page" do
+        put :update, :id => @worker, :worker => @attr
+        response.should render_template('edit')
+      end
+
+      it 'should have the correct title' do
+        put :update, :id => @worker, :worker => @attr
+        response.should have_selector('title', :content => 'Edit worker')
+      end
+    end
+
+    describe 'success' do
+      before(:each) do
+        @attr = { :first_name => 'NewFirst', :last_name => 'NewLast' }
+      end
+
+      it "should change the worker's attributes" do
+        put :update, :id => @worker, :worker => @attr
+        @worker.reload
+        @worker.first_name.should == @attr[:first_name]
+        @worker.last_name.should == @attr[:last_name]
+      end
+
+      it 'should redirect to the root path' do
+        put :update, :id => @worker, :worker => @attr
+        response.should redirect_to(root_path)
+      end
+    end
+  end
 end

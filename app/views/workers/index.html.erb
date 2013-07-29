@@ -1,2 +1,22 @@
 <h1>Listing workers</h1>
-<p>Welcome to the workers page!</p>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Work orders</th>
+  </tr>
+
+  <% @workers.each do |worker| %>
+    <tr>
+      <td><%= worker.first_name %></td>
+      <td><%= worker.last_name %></td>
+      <td><%= link_to 'View all', '#' %></td>
+      <td><%= link_to 'Show', '#' %></td>
+      <td><%= link_to 'Edit', '#' %></td>
+      <td><%= link_to 'Destroy', '#' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+<%= link_to 'New worker', new_worker_path %> | <%= link_to 'Search work orders', '#' %>

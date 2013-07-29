@@ -1,6 +1,7 @@
 class WorkersController < ApplicationController
   def index
     @title = 'Listing workers'
+    @workers = Worker.all
   end
 
   def new
@@ -14,6 +15,21 @@ class WorkersController < ApplicationController
       redirect_to root_path, :notice => 'Worker was successfully created.'
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @title = 'Edit worker'
+    @worker = Worker.find(params[:id])
+  end
+
+  def update
+    @worker = Worker.find(params[:id])
+    if @worker.update(worker_params)
+      redirect_to root_path
+    else
+      @title = 'Edit worker'
+      render 'edit'
     end
   end
 
