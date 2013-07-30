@@ -1,6 +1,12 @@
 <title>Listing work orders</title>
 <h1>Listing all work orders</h1>
 
+<%= form_tag search_search_results_path, :method => 'get' do %>
+	<%= text_field_tag :search, params[:search], :placeholder => 	"Search by status" %>
+<% end %>
+
+<br>
+
 <table>
   <thead>
     <tr>

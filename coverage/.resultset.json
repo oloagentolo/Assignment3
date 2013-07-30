@@ -1,6 +1,20 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/christophercruz/Desktop/Assignment3/app/controllers/search_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/christophercruz/Desktop/Assignment3/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
       "/Users/christophercruz/Desktop/Assignment3/app/controllers/work_orders_controller.rb": [
         1,
         1,
@@ -57,13 +71,6 @@
         1,
         9,
         null,
-        null
-      ],
-      "/Users/christophercruz/Desktop/Assignment3/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
         null
       ],
       "/Users/christophercruz/Desktop/Assignment3/app/controllers/workers_controller.rb": [
@@ -134,6 +141,6 @@
         null
       ]
     },
-    "timestamp": 1375204951
+    "timestamp": 1375211844
   }
 }

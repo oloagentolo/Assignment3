@@ -1,4 +1,5 @@
 JobSystem::Application.routes.draw do
+  get "search/search_results"
   resources :work_orders
 
   resources :workers
