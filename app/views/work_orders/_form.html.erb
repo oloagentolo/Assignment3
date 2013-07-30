@@ -17,8 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.select :status, options_for_select(["created", "in progress", "review", "completed"])%>
+	
   </div>
+  
+  <div class="field">
+	  <%= f.label :worker %>
+	  <%= f.select :worker_id, Worker.all.map {|worker| [worker.id, worker.id]} %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

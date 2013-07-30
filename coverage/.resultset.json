@@ -123,14 +123,17 @@
       "/Users/christophercruz/Desktop/Assignment3/app/models/work_order.rb": [
         1,
         1,
+        null,
+        1,
         null
       ],
       "/Users/christophercruz/Desktop/Assignment3/app/models/worker.rb": [
         1,
         1,
+        null,
         null
       ]
     },
-    "timestamp": 1375160265
+    "timestamp": 1375204951
   }
 }

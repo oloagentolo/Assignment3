@@ -1,9 +1,10 @@
 <title>Listing work orders</title>
-<h1>Listing work orders</h1>
+<h1>Listing all work orders</h1>
 
 <table>
   <thead>
     <tr>
+	  <th>Worker</th>
       <th>Details</th>
       <th>Status</th>
       <th></th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @work_orders.each do |work_order| %>
       <tr>
+		<td><%= work_order.worker_id %></td>
         <td><%= work_order.details %></td>
         <td><%= work_order.status %></td>
         <td><%= link_to 'Show', work_order %></td>

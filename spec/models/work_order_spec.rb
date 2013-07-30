@@ -15,7 +15,7 @@ describe WorkOrder do
       no_status = WorkOrder.new(@attr.merge(:status => ''))
       no_status.should_not be_valid
     end
-
+    
     it 'should create a new instance given valid attributes' do
       WorkOrder.create!(@attr)
     end

@@ -155,7 +155,7 @@ describe WorkOrdersController do
 
     it 'should redirect to the root path' do
       delete :destroy, :id => @work_order
-      response.should redirect_to(root_path)
+      response.should redirect_to(work_orders_path)
     end
   end
 end

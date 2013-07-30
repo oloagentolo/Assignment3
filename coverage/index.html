@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-07-29T23:57:45-05:00">2013-07-29T23:57:45-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-07-30T12:22:31-05:00">2013-07-30T12:22:31-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>70</b> relevant lines. 
-    <span class="green"><b>70</b> lines covered</span> and
+    <b>71</b> relevant lines. 
+    <span class="green"><b>71</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#be88acc690a843c3857ed69f08fb52efd8dacd41" class="src_link" title="app/models/work_order.rb">app/models/work_order.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -93,7 +93,7 @@
       <tr>
         <td class="strong"><a href="#83235d74595fe8375a0c2d3663594344634bafa2" class="src_link" title="app/models/worker.rb">app/models/worker.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
+        <td>4</td>
         <td>2</td>
         <td>2</td>
         <td>0</td>
@@ -445,7 +445,7 @@
         <li class="covered" data-hits="2" data-linenumber="45">
           <span class="hits">2</span>
           
-          <code class="ruby">    redirect_to root_path</code>
+          <code class="ruby">    redirect_to work_orders_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
@@ -499,7 +499,7 @@
         <li class="covered" data-hits="9" data-linenumber="54">
           <span class="hits">9</span>
           
-          <code class="ruby">      params.require(:work_order).permit(:details, :status)</code>
+          <code class="ruby">      params.require(:work_order).permit(:details, :status, :worker_id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
@@ -853,8 +853,8 @@
     <h3>app/models/work_order.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -875,6 +875,18 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :worker</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -911,6 +923,12 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  #has_many :work_orders</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>

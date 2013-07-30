@@ -42,7 +42,7 @@ class WorkOrdersController < ApplicationController
   def destroy
     @work_order = WorkOrder.find(params[:id])
     @work_order.destroy
-    redirect_to root_path
+    redirect_to work_orders_path
   end
 
   private
@@ -51,6 +51,6 @@ class WorkOrdersController < ApplicationController
     end
 
     def work_order_params
-      params.require(:work_order).permit(:details, :status)
+      params.require(:work_order).permit(:details, :status, :worker_id)
     end
 end
