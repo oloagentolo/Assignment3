@@ -1,4 +1,6 @@
 JobSystem::Application.routes.draw do
+  resources :work_orders
+
   resources :workers
 
   # The priority is based upon order of creation: first created -> highest priority.

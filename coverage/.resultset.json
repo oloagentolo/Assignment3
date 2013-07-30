@@ -1,7 +1,72 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/tmagent17/Rails_Projects/JobSystem/app/controllers/workers_controller.rb": [
+      "/Users/christophercruz/Desktop/Assignment3/app/controllers/work_orders_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        4,
+        4,
+        2,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        5,
+        2,
+        null,
+        3,
+        3,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        11,
+        null,
+        null,
+        1,
+        9,
+        null,
+        null
+      ],
+      "/Users/christophercruz/Desktop/Assignment3/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/christophercruz/Desktop/Assignment3/app/controllers/workers_controller.rb": [
         1,
         1,
         2,
@@ -55,19 +120,17 @@
         null,
         null
       ],
-      "/home/tmagent17/Rails_Projects/JobSystem/app/controllers/application_controller.rb": [
+      "/Users/christophercruz/Desktop/Assignment3/app/models/work_order.rb": [
         1,
-        null,
-        null,
         1,
         null
       ],
-      "/home/tmagent17/Rails_Projects/JobSystem/app/models/worker.rb": [
+      "/Users/christophercruz/Desktop/Assignment3/app/models/worker.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1375062902
+    "timestamp": 1375160265
   }
 }
