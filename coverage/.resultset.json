@@ -1,21 +1,21 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/christophercruz/Desktop/Assignment3/app/controllers/search_controller.rb": [
+      "/Github/Assignment3/app/controllers/search_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/christophercruz/Desktop/Assignment3/app/controllers/application_controller.rb": [
+      "/Github/Assignment3/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/christophercruz/Desktop/Assignment3/app/controllers/work_orders_controller.rb": [
+      "/Github/Assignment3/app/controllers/work_orders_controller.rb": [
         1,
         1,
         null,
@@ -73,7 +73,7 @@
         null,
         null
       ],
-      "/Users/christophercruz/Desktop/Assignment3/app/controllers/workers_controller.rb": [
+      "/Github/Assignment3/app/controllers/workers_controller.rb": [
         1,
         1,
         2,
@@ -127,20 +127,20 @@
         null,
         null
       ],
-      "/Users/christophercruz/Desktop/Assignment3/app/models/work_order.rb": [
+      "/Github/Assignment3/app/models/work_order.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/christophercruz/Desktop/Assignment3/app/models/worker.rb": [
+      "/Github/Assignment3/app/models/worker.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1375233102
+    "timestamp": 1375236775
   }
 }
