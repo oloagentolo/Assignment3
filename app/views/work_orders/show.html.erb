@@ -1,5 +1,10 @@
 <title>Details for <%= @work_order.status%></title>
+<center>
+	<h1>Details for work order #<%= @work_order.id %> </h1>
 <p id="notice"><%= notice %></p>
+
+<br/>
+<br/>
 
 <p>
   <strong>Details:</strong>
@@ -13,3 +18,4 @@
 
 <%= link_to 'Edit', edit_work_order_path(@work_order) %> |
 <%= link_to 'Back', work_orders_path %>
+</center>

@@ -1,25 +1,14 @@
+<center>
 <h1>Details for <%= @worker.first_name %> <%= @worker.last_name %></h1>
-
-<p>
-  <strong>First name:</strong>
-  <%= @worker.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @worker.last_name %>
-</p>
-
+<br/><br/>
 <h2>Assigned Work Orders</h2>
 
-<table>
-  <thead>
+<table class = "table table-bordered table-striped table table-hover pretty">
     <tr>
 	  <th>Worker</th>
       <th>Details</th>
       <th>Status</th>
     </tr>
-  </thead>
 
   <tbody>
     <% @worker.work_orders.each do |worker| %>
@@ -34,3 +23,4 @@
 
 <%= link_to 'Edit', edit_worker_path(@worker) %> |
 <%= link_to 'Back', root_path %>
+</center>
